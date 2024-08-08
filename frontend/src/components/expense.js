@@ -117,7 +117,7 @@ const Expense = () => {
     const handleAddExpense = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:4000/api/expenses', {
+            const response = await fetch('https://expensetrack-chmb.onrender.com/api/expenses', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

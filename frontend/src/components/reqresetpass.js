@@ -15,7 +15,7 @@ function RequestPasswordReset() {
         setLoading(true);
         setError('');
         try {
-            const response = await axios.post('http://localhost:4000/api/request-password-reset', { username, email });
+            const response = await axios.post('https://expensetrack-chmb.onrender.com/api/request-password-reset', { username, email });
             setMessage(response.data.message);
             navigate('/resetpass');
         } catch (error) {

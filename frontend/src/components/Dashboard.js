@@ -165,14 +165,14 @@ const Dashboard = () => {
     const fetchData = async () => {
         try {
             // Fetch balance
-            const balanceResponse = await fetch('http://localhost:4000/api/balance', {
+            const balanceResponse = await fetch('https://expensetrack-chmb.onrender.com/api/balance', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             });
             const balanceData = await balanceResponse.json();
             setBalance(balanceData.balance);
 
             // Fetch recent expenses
-            const recentExpensesResponse = await fetch('http://localhost:4000/api/recentexpenses', {
+            const recentExpensesResponse = await fetch('https://expensetrack-chmb.onrender.com/api/recentexpenses', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             });
             const recentExpensesData = await recentExpensesResponse.json();
@@ -186,7 +186,7 @@ const Dashboard = () => {
     const fetchChartData = async () => {
         try {
             // Fetch income data
-            const incomeResponse = await fetch('http://localhost:4000/api/incomedata', {
+            const incomeResponse = await fetch('https://expensetrack-chmb.onrender.com/api/incomedata', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             });
             const incomeData = await incomeResponse.json();
@@ -194,7 +194,7 @@ const Dashboard = () => {
             setIncomeData(incomeData);
 
             // Fetch expense data
-            const expenseResponse = await fetch('http://localhost:4000/api/expensedata', {
+            const expenseResponse = await fetch('https://expensetrack-chmb.onrender.com/api/expensedata', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             });
             const expenseData = await expenseResponse.json();

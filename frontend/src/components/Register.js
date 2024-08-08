@@ -15,7 +15,7 @@ function Register() {
         setLoading(true);
         setError(''); // Clear previous errors
         try {
-            const response = await axios.post('http://localhost:4000/api/register', { username, email, password });
+            const response = await axios.post('https://expensetrack-chmb.onrender.com/api/register', { username, email, password });
             if (response.status === 201) {
                 navigate('/login');
             }
