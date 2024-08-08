@@ -297,6 +297,15 @@ app.get('/api/expensedata', authenticateToken, async (req, res) => {
     }
 });
 
+app.get('/api/test', async (req, res) => {
+    
+    try {
+        res.status(200).json({ message: 'hi' });
+    } catch (error) {
+        console.error('Error fetching expense data:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
 
 app.listen(PORT, () => {
